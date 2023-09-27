@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: rgb(45, 45, 230);
@@ -17,10 +21,34 @@ a {
   align-items: center;
 }
 
+.d-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 1rem 0;
+  place-content: center;
+}
+
+.d-flex-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .textCenter {
   text-align: center;
 }
 
 .textStart {
   text-align: start;
+}
+
+.title {
+  width: 50%;
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
 }

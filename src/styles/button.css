@@ -1,0 +1,42 @@
+.buttonContainer {
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .buttonContainer p {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+  
+  .generalButton {
+    min-width: 200px;
+    max-width: 250px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    border: 1px solid rgb(232, 229, 229);
+    background-color: white;
+    margin: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .loginButton {
+    color: #00d8ff;
+  }
+
+  .createAccountButton {
+    background-color: #00d8ff;
+    color: white;
+  }
+
+  .principal {
+    background-color: #00d8ff;
+    color: white;
+  }
+
+  .secondary {
+    color: #00d8ff;
+    border-color: #00d8ff;
+  }

@@ -21,48 +21,6 @@
   height: 100%;
 }
 
-.bannerContainer {
-  width: 50%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 2rem;
-}
-
-.buttonContainer {
-  max-width: 250px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.buttonContainer p {
-  width: 100%;
-  font-size: 0.7rem;
-  padding: 0.5rem;
-}
-
-.generalButton {
-  min-width: 200px;
-  max-width: 250px;
-  padding: 0.5rem;
-  border-radius: 5rem;
-  border: 1px solid rgb(232, 229, 229);
-  background-color: white;
-  margin: 0.5rem;
-}
-
-.title {
-  width: 50%;
-  font-size: 3rem;
-}
-
-.subtitle {
-  font-size: 1.8rem;
-  margin: 1.5rem 0;
-}
-
 .account {
   font-size: 1rem;
   margin: 1rem 0;
@@ -72,12 +30,24 @@
   margin: 2rem 0;
 }
 
-.footerContainer ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+.secondExcercise {
+  margin: 2rem 0;
 }
 
-.footerContainer ul li {
+.listContainer {
+  width: 100%;
   list-style: none;
+  padding: 1rem;
+  margin: 2rem 0;
 }
+
+.listContainer div {
+  width: 180px;
+}
+
+.listCity {
+  padding: 0.2rem 0;
+}
+
+
+

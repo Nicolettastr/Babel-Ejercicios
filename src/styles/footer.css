@@ -1,0 +1,9 @@
+.footerContainer ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .footerContainer ul li {
+    list-style: none;
+  }

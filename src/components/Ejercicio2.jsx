@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button';
 
 const Ejercicio2 = () => {
 
@@ -12,13 +13,9 @@ const Ejercicio2 = () => {
     }
 
   return (
-    <div>
-      <button onClick={() => principalAction()}>
-            principalAction
-      </button>
-      <button onClick={(e) => secondaryAction(e, 'secondary action')}>
-            secondaryAction
-      </button>
+    <div className='d-flex secondExcercise'>
+      <Button className={'principal'} buttonName={'principal Action'} onclick={() => principalAction()} />
+      <Button className={'secondary'} buttonName={'secondary Action'} onclick={(e) => secondaryAction(e, 'secondary action')} />
     </div>
   )
 }

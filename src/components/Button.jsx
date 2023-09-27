@@ -1,10 +1,13 @@
 import React from 'react'
+import '../styles/button.css'
 
 const Button = ({
-  buttonName
+  buttonName,
+  onclick,
+  className
 }) => {
   return (
-    <button className='generalButton'>
+    <button className={`generalButton ${className}`} onClick={onclick}>
         {buttonName}
     </button>
   )

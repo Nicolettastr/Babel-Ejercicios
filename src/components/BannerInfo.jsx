@@ -2,6 +2,7 @@ import React from 'react'
 import Title from './Title'
 import Subtitle from './Subtitle'
 import Button from './Button'
+import '../styles/banner.css'
 
 const BannerInfo = () => {
   return (
@@ -11,8 +12,12 @@ const BannerInfo = () => {
       <div className='buttonContainer'>
         <Button buttonName={'Registrarse con Google'} />
         <Button buttonName={'Registrarse con Apple'} />
-        <p className='textCenter'>o</p>
-        <Button buttonName={'Crear cuenta'} />
+        <div className='bannerOption'>
+            <span className='line'></span>
+              <p className='textCenter'>o</p>
+            <span className='line'></span>
+          </div>
+        <Button className={'createAccountButton'} buttonName={'Crear cuenta'} />
         <p className='textStart'>
             Lorem ipsum dolor 
             sit amet 
@@ -26,7 +31,7 @@ const BannerInfo = () => {
       </div>
       <div className='loginContainer'>
         <Subtitle className={'account'} subtitle={'¿Ya tienes una cuenta?'} />
-        <Button buttonName={'Iniciar sesión'} />
+        <Button className={'loginButton'} buttonName={'Iniciar sesión'} />
       </div>
     </div>
   )

@@ -1,0 +1,21 @@
+
+.bannerContainer {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+  
+  .line {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid rgb(232, 229, 229);
+    padding: 0 0.2rem;
+  }
+  
+  .bannerOption {
+    display: flex;
+    align-items: center;
+  }

@@ -1,0 +1,31 @@
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgb(240, 244, 246);
+  }
+  
+  .NavbarLogo {
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbarLinks ul {
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .navbarLinks ul li {
+    list-style: none;
+  }
+  
+  .navbarLinks ul li a {
+    color: black;
+  }
+  
+  .navbarLinks ul li:hover {
+    text-decoration: underline;
+  }
