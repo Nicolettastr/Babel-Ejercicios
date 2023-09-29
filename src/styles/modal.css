@@ -1,0 +1,27 @@
+.modalContainer {
+    width: 350px;
+    height: fit-content;
+    padding: 0.5rem;
+    border: 1px solid var(--lightBlue);
+    border-radius: 0.4rem;
+}
+
+.body_modal {
+    width: 85%;
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.modalActivated {
+    max-height: 400px;
+}
+
+.modalText {
+    padding: 1rem;
+}
+
+.modalTitle {
+    margin-top: 0.5rem;
+}

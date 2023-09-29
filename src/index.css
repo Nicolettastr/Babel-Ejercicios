@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --lightBlue: #00d8ff;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -35,12 +39,20 @@ a {
   align-items: center;
 }
 
+.m-2 {
+  margin: 2rem;
+}
+
 .textCenter {
   text-align: center;
 }
 
 .textStart {
   text-align: start;
+}
+
+.textJustify {
+  text-align: justify;
 }
 
 .title {

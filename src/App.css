@@ -49,5 +49,24 @@
   padding: 0.2rem 0;
 }
 
+.underline {
+  text-decoration: underline;
+}
 
+.royalblue {
+  color: royalblue;
+}
+
+.cyan {
+  color: cyan;
+}
+
+.purple {
+  color: purple;
+}
+
+
+.fourthExercise {
+  margin: 2rem 0;
+}
 

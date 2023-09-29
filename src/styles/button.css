@@ -23,20 +23,21 @@
   }
   
   .loginButton {
-    color: #00d8ff;
+    color: var(--lightBlue);
   }
 
   .createAccountButton {
-    background-color: #00d8ff;
+    background-color: var(--lightBlue);
     color: white;
   }
 
   .principal {
-    background-color: #00d8ff;
+    background-color: var(--lightBlue);
     color: white;
+    border: none;
   }
 
   .secondary {
-    color: #00d8ff;
-    border-color: #00d8ff;
+    color: var(--lightBlue);
+    border-color: var(--lightBlue);
   }

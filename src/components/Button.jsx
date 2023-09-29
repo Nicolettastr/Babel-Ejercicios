@@ -4,10 +4,11 @@ import '../styles/button.css'
 const Button = ({
   buttonName,
   onclick,
-  className
+  className,
+  type
 }) => {
   return (
-    <button className={`generalButton ${className}`} onClick={onclick}>
+    <button className={`generalButton ${className} ${type}`} onClick={onclick}>
         {buttonName}
     </button>
   )
