@@ -9,7 +9,7 @@ import '../styles/modal.css'
 
 // Cuando se pulse en el botón "Contraer", volverá al estado inicial: el botón renderizará "Mostrar" y los hijos del componente desaparecerán.
 
-const Ejercicio7 = ({children}) => {
+const Ejercicio7 = ({children, title}) => {
 
   const [open, setOpen] = useState(false)
 
@@ -19,6 +19,7 @@ const Ejercicio7 = ({children}) => {
 
   return (
     <div className='modalContainer d-flex'>
+      <h2>{title}</h2>
       <div className={`body_modal d-flex ${open ? 'modalActivated' : ''}`}>
         {children}
       </div>

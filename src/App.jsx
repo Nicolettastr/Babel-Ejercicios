@@ -48,8 +48,7 @@ function App() {
         <div className='d-flex m-2'>
           <h2>Ejercicio 6 y 7</h2>
             <Switch/>
-            <Ejercicio7>
-                <Title className={'modalTitle'} title={'Modal'}/>
+            <Ejercicio7 title={'Modal'}>
                 <ModalContent/>
             </Ejercicio7>
         </div>
