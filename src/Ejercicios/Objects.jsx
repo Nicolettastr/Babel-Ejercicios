@@ -46,7 +46,7 @@ const Objects = () => {
     }
 
   return (
-    <div>
+    <div className='d-flex'>
         <h2>{user.role}</h2>
         <p>{user.username} {user.email}</p>
         <Button onclick={() => handleLogin()} buttonName={'Login'}/>

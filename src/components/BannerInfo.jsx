@@ -8,7 +8,7 @@ import Loader from '../Ejercicios/Loader'
 
 const BannerInfo = () => {
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleLoading = (event, boolean) => {
     event.preventDefault()

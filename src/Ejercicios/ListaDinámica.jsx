@@ -36,11 +36,12 @@ const ListaDinámica = () => {
     }
 
   return (
-    <div>
+    <div className='m-2 d-flex'>
       <ul>
         {list.map((item) => {
           return (
               <li 
+                className='d-flex m-2'
                 key={item.id}>
                 {item.name}
                 <Button 
@@ -51,6 +52,7 @@ const ListaDinámica = () => {
         })}
       </ul>
       <Button 
+        className='secondary'
         onclick={() => handleAddElement('newName')} 
         buttonName={'Agregar Elemento'}/>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Button from './Button'
+import Button from '../components/Button'
 
 const Listas = () => {
 
@@ -29,16 +29,18 @@ const Listas = () => {
     }
 
   return (
-    <div>
-        <Button 
-            onclick={() => insertItem()} 
-            buttonName={'Agregar Elemento'}/>
-        <Button 
-            onclick={() => filterList()} 
-            buttonName={'Filtrar Lista'}/>
-        <Button 
-            onclick={() => removeThird()} 
-            buttonName={'Eliminar Tercer Elemento'}/>
+    <div className='m-2 d-flex-row'>
+        <div className='d-flex'>
+            <Button 
+                onclick={() => insertItem()} 
+                buttonName={'Agregar Elemento'}/>
+            <Button 
+                onclick={() => filterList()} 
+                buttonName={'Filtrar Lista'}/>
+            <Button 
+                onclick={() => removeThird()} 
+                buttonName={'Eliminar Tercer Elemento'}/>
+        </div>
         <ul>
             {list.map((item) => <li key={item}>{item}</li>)}
         </ul>
