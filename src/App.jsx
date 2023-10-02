@@ -12,7 +12,9 @@ import Ejercicio5 from './components/Ejercicio5'
 import Switch from './components/Switch'
 import Ejercicio7 from './components/Ejercicio7'
 import ModalContent from './components/ModalContent'
-import Title from './components/Title'
+import Listas from './components/Listas'
+import Objects from './components/Objects'
+import ListaDinámica from './components/ListaDinámica'
 
 function App() {
 
@@ -51,6 +53,15 @@ function App() {
             <Ejercicio7 title={'Modal'}>
                 <ModalContent/>
             </Ejercicio7>
+        </div>
+        <div className='d-flex'>
+          <h2>Listas y Objetos</h2>
+          <Listas/>
+          <Objects/>
+        </div>
+        <div>
+          <h2>Ejercicio 8</h2>
+          <ListaDinámica/>
         </div>
         <Footer/>
       </>
