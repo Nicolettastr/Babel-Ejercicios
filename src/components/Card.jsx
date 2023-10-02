@@ -75,7 +75,7 @@ const Card = () => {
       const eachCard = () => {
         return objectArray.map((item) => {
             return (
-                <div className='cardContainer' key={item}>
+                <div className='cardContainer' key={item.firstName}>
                     <Logo className={'cardImage'}/>
                     <div>
                         <Title className={'cardTitle'} title={`${item.firstName} ${item.lastName}`}/>

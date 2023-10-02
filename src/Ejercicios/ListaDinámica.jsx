@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Button from './Button'
+import Button from '../components/Button'
 
 // Diseñar un componente "ListaDinámica" en el que definiremos un estado. Este estado almacenará una lista de objetos que tendrán al menos dos propiedades: "id" (número) y "nombre" (cadena de texto). Inicialmente la lista tendrá 3 objetos de muestra predefinidos.
 
@@ -40,12 +40,13 @@ const ListaDinámica = () => {
       <ul>
         {list.map((item) => {
           return (
-            <>
-              <li key={item.name}>{item.name}</li>
-              <Button 
+              <li 
+                key={item.id}>
+                {item.name}
+                <Button 
                 onclick={() => handleDeleteElement(item.id)} 
                 buttonName={'Eliminar'}/>
-            </>
+              </li>
           )
         })}
       </ul>

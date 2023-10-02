@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Title from './Title'
-import Button from './Button'
+import Title from '../components/Title'
+import Button from '../components/Button'
 import '../styles/modal.css'
 
 // Diseñar un componente "Panel" que admita hijos y una propiedad "title".
@@ -23,7 +23,7 @@ const Ejercicio7 = ({children, title}) => {
       <div className={`body_modal d-flex ${open ? 'modalActivated' : ''}`}>
         {children}
       </div>
-      <Button className={'principal'} buttonName={open ? 'Show Modal' : 'Close Modal'} onclick={handleModal}/>
+      <Button className={'principal'} buttonName={open ? 'Close Modal' : 'Show Modal'} onclick={handleModal}/>
     </div>
   )
 }

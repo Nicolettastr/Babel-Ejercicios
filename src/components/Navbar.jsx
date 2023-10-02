@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const showLinks = () => {
         return links.map((item) => {
-            return <li key={item}><a href={item.link}>{item.name}</a></li>
+            return <li key={item.name}><a href={item.link}>{item.name}</a></li>
         })
     }
 

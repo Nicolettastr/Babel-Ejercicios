@@ -1,0 +1,32 @@
+.loadingContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+.loadingContainer div {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.2rem;
+    background-color: var(--lightBlue);
+    animation: rotate 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        border-radius: 0.2rem;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-radius: 100%;
+        background-color: var(--mediumBlue);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-radius: 0;
+        background-color: var(--darkBlue);
+    }
+
+}

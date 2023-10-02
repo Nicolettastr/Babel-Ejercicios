@@ -9,7 +9,7 @@
 // 4.Cada elemento, entre sus datos, tendrá un buleano que determinará si el elemento se debe mostrar resaltado (en negrita, con sombreado, con un borde grueso, etc. como se quiera).
 
 import React from 'react'
-import Button from './Button'
+import Button from '../components/Button'
 
 const Ejercicio4 = () => {
 

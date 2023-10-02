@@ -104,23 +104,19 @@ const Ejercicio3 = () => {
             return array.sort()
         }
 
-        console.log(sortList(simpleArray))
-
         // # Encontrando el índice de la persona que viva en Madrid en la lista de objetos.
 
         function viveMadrid() {
             return objectArray.findIndex((element) => element.city === 'Barcelona')
         }
 
-        console.log(viveMadrid())
-
         const listName = (array) => {
-          return array.map((item) => <li key={item}>{item}</li>)
+          return array.map((item) => <li key={item}>{`${item}ss`}</li>)
         }
   
         function renderComplexList() {
           return objectArray.map((element) => (
-              <li className='listCity' key={element}>
+              <li className='listCity' key={element.lastName}>
                   <p>{`${element.firstName} ${element.lastName} is from ${element.city}`}</p>
               </li>
           ))

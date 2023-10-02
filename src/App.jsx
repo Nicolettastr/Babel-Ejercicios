@@ -3,20 +3,33 @@ import './App.css'
 import Logo from './components/Logo'
 import BannerInfo from './components/BannerInfo'
 import Footer from './components/Footer'
-import Ejercicio2 from './components/Ejercicio2'
-import Ejercicio3 from './components/Ejercicio3'
 import Navbar from './components/Navbar'
 import Card from './components/Card'
-import Ejercicio4 from './components/Ejercicio4'
-import Ejercicio5 from './components/Ejercicio5'
-import Switch from './components/Switch'
-import Ejercicio7 from './components/Ejercicio7'
+import Switch from './Ejercicios/Switch'
 import ModalContent from './components/ModalContent'
 import Listas from './components/Listas'
-import Objects from './components/Objects'
-import ListaDinámica from './components/ListaDinámica'
+import Objects from './Ejercicios/Objects'
+import ListaDinámica from './Ejercicios/ListaDinámica'
+import Div from './components/div'
+
+
+import Ejercicio2 from './Ejercicios/Ejercicio2'
+import Ejercicio3 from './Ejercicios/Ejercicio3'
+import Ejercicio4 from './Ejercicios/Ejercicio4'
+import Ejercicio5 from './Ejercicios/Ejercicio5'
+import Ejercicio7 from './Ejercicios/Ejercicio7'
+import Ejercicio9 from './Ejercicios/Ejercicio9'
+import Title from './components/Title'
+import Loader from './Ejercicios/Loader'
+import { useState } from 'react'
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  setTimeout(() => {
+    setIsLoading(prevIsLoading => !prevIsLoading)
+  }, [5000])
 
   const handleClick = (e) => {
     console.log(e)
@@ -24,7 +37,11 @@ function App() {
 
   return (
       <>
-        <Navbar/>
+        {isLoading ? 
+          <Loader />
+          :
+          <>
+            <Navbar/>
         <div className='appContainer'>
           <Logo className={'imgContainer d-flex'}/>
           <BannerInfo/>
@@ -32,38 +49,39 @@ function App() {
         <div className='d-grid'>
           <Card/>
         </div>
-        <div className='d-flex m-2'>
-        <h2>Ejercicio 2 y 3</h2>
+        <Div>
+          <Title title={'Ejercicio 2 y 3'}/>
           <Ejercicio2/>
           <Ejercicio3/>
-        </div>
-        <div className='d-flex m-2'>
-          <h2>Ejercicio 4 y 5</h2>
+        </Div>
+        <Div>
+          <Title title={'Ejercicio 4 y 5'}/>
           <Ejercicio4/>
-          <Ejercicio5 onclick={(e) => handleClick(e)}>
+          <Ejercicio5 
+            onclick={(e) => handleClick(e)}>
             Principal button
           </Ejercicio5>
-          <Ejercicio5 disabled type='secondary' onclick={(e) => handleClick(e)}>
-            Secondary button
-          </Ejercicio5>
-        </div>
-        <div className='d-flex m-2'>
-          <h2>Ejercicio 6 y 7</h2>
-            <Switch/>
+        </Div>
+        <Div>
+          <Title title={'Ejercicio 6 y 7'}/>
+          <Switch/>
             <Ejercicio7 title={'Modal'}>
                 <ModalContent/>
             </Ejercicio7>
-        </div>
-        <div className='d-flex'>
-          <h2>Listas y Objetos</h2>
+        </Div>
+        <Div>
+          <Title title={'Listas y Objetos'}/>
           <Listas/>
           <Objects/>
-        </div>
-        <div>
-          <h2>Ejercicio 8</h2>
+        </Div>
+        <Div>
+          <Title title={'Ejercicio 8 y 9'}/>
           <ListaDinámica/>
-        </div>
+          <Ejercicio9/>
+        </Div>
         <Footer/>
+          </>
+        }
       </>
   )
 }
