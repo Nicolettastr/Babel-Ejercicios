@@ -5,10 +5,11 @@ const Button = ({
   buttonName,
   onclick,
   className,
-  type
+  type,
+  buttonType
 }) => {
   return (
-    <button className={`generalButton ${className} ${type}`} onClick={onclick}>
+    <button className={`generalButton ${className} ${type}`} type={buttonType} onClick={onclick}>
         {buttonName}
     </button>
   )

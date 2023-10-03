@@ -1,0 +1,12 @@
+.generalInput {
+    width: 200px;
+    height: 40px;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px solid var(--lightBlue);
+    border-radius: 0.3rem;
+}
+
+.inputLabel {
+    margin-top: 1rem;
+}

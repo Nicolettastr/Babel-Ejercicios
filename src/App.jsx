@@ -22,6 +22,7 @@ import Ejercicio9 from './Ejercicios/Ejercicio9'
 import Title from './components/Title'
 import Loader from './Ejercicios/Loader'
 import { useState } from 'react'
+import Formulario from './Ejercicios/Formulario'
 
 function App() {
 
@@ -78,6 +79,10 @@ function App() {
           <Title title={'Ejercicio 8 y 9'}/>
           <ListaDinámica/>
           <Ejercicio9/>
+        </Div>
+        <Div>
+          <Title title={'Form'} />
+          <Formulario/>
         </Div>
         <Footer/>
           </>
