@@ -24,6 +24,7 @@ import Loader from './Ejercicios/Loader'
 import { useState } from 'react'
 import Formulario from './Ejercicios/Formulario'
 import ScrollOnTop from './Ejercicios/ScrollOnTop'
+import CountDown from './Ejercicios/CountDown'
 
 function App() {
 
@@ -35,6 +36,10 @@ function App() {
 
   const handleClick = (e) => {
     console.log(e)
+  }
+
+  const handleCountDown = () => {
+    alert('Time´s up!')
   }
 
   return (
@@ -84,6 +89,10 @@ function App() {
         <Div>
           <Title title={'Form'} />
           <Formulario/>
+        </Div>
+        <Div>
+          <Title title={'CountDown'} />
+          <CountDown handleCountDown={handleCountDown} />
         </Div>
         <Footer/>
           </>
