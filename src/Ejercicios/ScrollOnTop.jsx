@@ -13,7 +13,8 @@ const ScrollOnTop = ({
     }
   
     const handleScrollToTop = () => {
-        document.querySelector('.scrollContainer').scrollTop = 0;
+        const scrollContainer = document.querySelector('.scrollContainer');
+        return scrollContainer.scrollTop = 0
     }
 
     console.log(scrollTop)
@@ -24,15 +25,14 @@ const ScrollOnTop = ({
     <div className='scrollContainer' onScroll={handleOnScroll}>
         {children}
         <Button 
-            className={'scrollToTop_position scrollToTop_ButtonDesign secondary'} 
+            className={'scrollToTop_position scrollToTop_Button secondary'} 
             buttonName={scrollToTopPosition}/>
         {scrollTop >= 1000 ? 
-            <div className='scrollToTop_Button'>
-                <Button 
-                    className={'scrollToTop_ButtonDesign principal'} 
-                    buttonName={'Scroll to top'}
-                    onClick={handleScrollToTop}/>
-            </div>
+            <Button 
+                className={'scrollToTop_Button principal'} 
+                buttonName={'Scroll to top'}
+                onclick={handleScrollToTop}/>
+            
         : '' }
     </div>
   )
