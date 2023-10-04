@@ -3,6 +3,12 @@ import Input from '../components/Input'
 import Button from '../components/Button'
 
 // Definir un formulario de registro de usuarios que contenga varias entradas: Nombre de usuario, correo electrónico, contraseña y confirmación de confirmación de contraseña.
+// 1. Realización simple.
+// 2. Aumentando la complejidad
+
+// ** 1. Impedir el registro si alguno de los campos está vacío..
+// ** 2. Cómo podemos agregar validaciones a cada una de las entradas?
+// ** 3. Mostrar feedback al usuario respecto a las validaciones realizadas.
 
 const Formulario = () => {
 
@@ -32,9 +38,11 @@ const Formulario = () => {
   const handleFormValidation = (event) => {
     event.preventDefault()
 
+    let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+
     try{
-      if(password === passwordConfirm) {
-        console.log(true)
+      if(password === passwordConfirm && userName.length > 1 && regex.test(email)) {
+        alert('Formulario enviado')
       } else {
         alert('Something went wrong')
       }
