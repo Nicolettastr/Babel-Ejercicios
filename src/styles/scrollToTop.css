@@ -1,0 +1,16 @@
+.scrollContainer {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto
+}
+
+.scrollToTop_Button {
+    position: fixed;
+    right: 2rem;
+    bottom: 1rem;
+}
+.scrollToTop_position {
+    position: fixed;
+    right: 2rem;
+    bottom: 6rem;
+}

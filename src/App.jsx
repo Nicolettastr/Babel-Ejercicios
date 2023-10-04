@@ -23,6 +23,7 @@ import Title from './components/Title'
 import Loader from './Ejercicios/Loader'
 import { useState } from 'react'
 import Formulario from './Ejercicios/Formulario'
+import ScrollOnTop from './Ejercicios/ScrollOnTop'
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
   }
 
   return (
-      <>
+      <ScrollOnTop>
         {isLoading ? 
           <Loader />
           :
@@ -87,7 +88,7 @@ function App() {
         <Footer/>
           </>
         }
-      </>
+      </ScrollOnTop>
   )
 }
 
