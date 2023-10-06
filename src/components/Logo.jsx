@@ -2,12 +2,13 @@ import React from 'react'
 import reactLogo from '../assets/react.svg'
 
 const Logo = ({
-  className
+  className,
+  image = reactLogo
 }) => {
   return (
     <div className={className}>
         <figure>
-            <img src={reactLogo} alt="Logo" />
+            <img src={image} alt="Logo" />
         </figure>
     </div>
   )

@@ -1,85 +1,60 @@
-import React from 'react'
-import Logo from './Logo';
+import React, { useState } from 'react'
+import Logo from './Logo'
 import Title from './Title';
 import Subtitle from './Subtitle';
+import Button from './Button'
 import '../styles/card.css'
+import { AiOutlineShopping } from 'react-icons/ai'
 
 const Card = () => {
 
-    const objectArray = [
-        {
-          firstName: "Erica",
-          lastName: "Davenhill",
-          age: 62,
-          gender: "Female",
-          city: "Le Bourget-du-Lac",
-        },
-        {
-          firstName: "Alissa",
-          lastName: "Shakshaft",
-          age: 94,
-          gender: "Female",
-          city: "Tangzhuang",
-        },
-        {
-          firstName: "Viva",
-          lastName: "Bishopp",
-          age: 2,
-          gender: "Female",
-          city: "Abengourou",
-        },
-        {
-          firstName: "August",
-          lastName: "Bend",
-          age: 40,
-          gender: "Male",
-          city: "Natarleba",
-        },
-        {
-          firstName: "Bartholomeo",
-          lastName: "Cosens",
-          age: 29,
-          gender: "Male",
-          city: "Madrid",
-        },
-        {
-          firstName: "Luci",
-          lastName: "Dudenie",
-          age: 51,
-          gender: "Female",
-          city: "Mayisyan",
-        },
-        {
-          firstName: "Cris",
-          lastName: "Diver",
-          age: 58,
-          gender: "Male",
-          city: "Jinhe",
-        },
-        {
-          firstName: "Rawley",
-          lastName: "Trappe",
-          age: 34,
-          gender: "Male",
-          city: "Madrid",
-        },
-        {
-          firstName: "Lavena",
-          lastName: "Devall",
-          age: 16,
-          gender: "Female",
-          city: "Dolní Sloupnice",
+  const [carItems, setCarItems] = useState([])
+  const getObjectArray = localStorage.getItem('objectArrayLocalStorage')
+  const objectArray = JSON.parse(getObjectArray) || []
+
+  const addItemToCar = (id) => {
+    objectArray.filter((item) => {
+        if(item.id === id) {
+          setCarItems((prevState) => {
+            const newItem = [...prevState, item]
+            localStorage.setItem('shoppingCarItems', JSON.stringify(newItem))
+            return newItem
+          })
         }
-      ];
+        
+        return setCarItems
+      })
+    }
 
       const eachCard = () => {
         return objectArray.map((item) => {
             return (
-                <div className='cardContainer' key={item.firstName}>
-                    <Logo className={'cardImage'}/>
+                <div 
+                  className='cardContainer' 
+                  key={item.id}>
+                    <Logo 
+                      className={'cardImage d-flex'} 
+                      image={item.image}/>
                     <div>
-                        <Title className={'cardTitle'} title={`${item.firstName} ${item.lastName}`}/>
-                        <Subtitle className={'cardSubtitle'} subtitle={`${item.gender === 'Female' ? 'She' : 'He'} is ${item.age} years old    and lives in ${item.city}`}/>
+                        <Title 
+                          className={'cardTitle'} 
+                          title={`${item.name}`}/>
+                        <div>
+                          <Subtitle 
+                            className={'cardSubtitle'} 
+                            subtitle={item.gender}/>
+                          <Subtitle 
+                            className={'cardSubtitle'} 
+                            subtitle={`${item.price}€`}/>
+                          <Subtitle 
+                            className={'cardSubtitle'} 
+                            subtitle={`${item.stock <= 4 ?
+                               `Hurry we just have ${item.stock} of these left` :
+                               `We have ${item.stock}!`}`}/>
+                        </div>
+                    </div>
+                    <div className='AddCarButtonCont flex-end'>
+                      <Button className={'addToCarButton'} buttonName={<AiOutlineShopping/>} onclick={() => addItemToCar(item.id)}/>
                     </div>
                 </div>
             )

@@ -2,10 +2,15 @@ import React from 'react'
 
 const Title = ({
     title,
-    className
+    className,
+    children,
+    container
 }) => {
   return (
-    <h1 className={className}>{title}</h1>
+    <div className={container}>
+        <h1 className={className}>{title}</h1>
+        {children}
+    </div>
   )
 }
 

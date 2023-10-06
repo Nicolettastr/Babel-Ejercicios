@@ -17,8 +17,6 @@ const ScrollOnTop = ({
         return scrollContainerRef.current.scrollTop = 0
     }
 
-    console.log(scrollTop)
-
     const scrollToTopPosition = parseInt(scrollTop)
 
   return (

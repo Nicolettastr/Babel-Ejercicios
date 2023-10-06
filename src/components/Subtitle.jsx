@@ -2,10 +2,15 @@ import React from 'react'
 
 const Subtitle = ({
     subtitle,
-    className
+    className,
+    children,
+    container
 }) => {
   return (
-    <h3 className={className}>{subtitle}</h3>
+    <div className={container}>
+        <h3 className={className}>{subtitle}</h3>
+        {children}
+    </div>
   )
 }
 
