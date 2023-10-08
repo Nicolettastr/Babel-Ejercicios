@@ -17,7 +17,7 @@
   .shoppingCarImage {
     width: 40vw;
     max-width: 400px;
-    height: fit-content;
+    height: 100%;
   }
   
   .shoppingCarCard figure {
@@ -43,7 +43,7 @@
     margin: 1rem;
     border-radius: 0.3rem;
     overflow: hidden;
-    background-color: rgb(240, 244, 246);
+    border: 1px solid rgb(232, 232, 232);
   }
   
   .shoppingCarBody {
@@ -54,8 +54,10 @@
   
   .totalPrice {
     width: 100%;
-    height: 20%;
+    height: 25%;
     padding: 1rem;
+    justify-content: space-between;
+    border-top: 1px solid rgb(232, 232, 232);
   }
   
   .shoppingResume {
@@ -95,4 +97,12 @@
 
   .pad {
     padding: 1rem 0.3rem;
+  }
+
+  .borderCard {
+    border-bottom: 1px solid rgb(232, 232, 232);
+  }
+
+  .subCard {
+    padding: 1rem 0;
   }

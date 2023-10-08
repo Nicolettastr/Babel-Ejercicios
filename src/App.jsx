@@ -4,28 +4,37 @@ import Logo from './components/Logo'
 import BannerInfo from './components/BannerInfo'
 import Footer from './components/Footer'
 import Card from './components/Card'
-import Form from './components/Form'
 import Loader from './Ejercicios/Loader'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ScrollOnTop from './Ejercicios/ScrollOnTop'
+import Input from './components/Input'
+import Div from './components/Div'
+import Button from './components/Button'
+import { FiSearch } from 'react-icons/fi'
 
 function App() {
 
   const [isLoading, setIsLoading] = useState(true)
-  const [objectArray, setObjetoArray] = useState([])
+  const [search, setSearch] = useState('')
+  const getObjectArray = localStorage.getItem('objectArrayLocalStorage')
+  const objectArray = JSON.parse(getObjectArray)
 
-  const addDataToObjetoArray = (newData) => {
-    setObjetoArray((prevObjectArray) => {
-      const updatedArray = [...prevObjectArray, newData];
-      localStorage.setItem('objectArrayLocalStorage', JSON.stringify(updatedArray));
-      return updatedArray;
-    })
-  }
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+  }, []);
 
-  setTimeout(() => {
-    setIsLoading(prevIsLoading => !prevIsLoading)
-  }, [5000])
+  const handleUserSearch = (event) => {
+    console.log(event.target.value)
+    setSearch(event.target.value)
+  } 
 
+  console.log(objectArray)
+
+  const filterObjects = objectArray.filter((item) => item.name.includes(search))
+
+  console.log('filter', filterObjects)
 
   return (
       <ScrollOnTop>
@@ -37,11 +46,16 @@ function App() {
               <Logo className={'imgContainer d-flex'}/>
               <BannerInfo/>
             </div>
-            <div className='form_Container d-flex'>
-              <Form addDataToObjetoArray={addDataToObjetoArray}/>
+            <div className='d-flex-row searchContainer'>
+              <Input 
+                placeholder={'Search'} 
+                name={'search'} 
+                value={search} 
+                onChange={(event) => handleUserSearch(event, 'search')}/>
+                <Button className={'searchButton'} buttonName={<FiSearch/>}/>
             </div>
             <div className='d-grid g-4'>
-              <Card/>
+              <Card filterObjects={filterObjects} />
             </div>
             <Footer/>
           </>

@@ -3,6 +3,7 @@ import useForm from '../hooks/useForm/useForm'
 import Button from './Button'
 import '../styles/form.css'
 
+
 const Form = ({
     addDataToObjetoArray
 }) => {
@@ -16,7 +17,7 @@ const Form = ({
         stock: 1,
         gender: '',
         terms_and_conditions: false,
-        quantity: 0
+        quantity: 1
         }
   
     const { data, createInputsOnchangeHandler, handleSubmitData} = useForm(objectData)
@@ -79,6 +80,7 @@ const Form = ({
     const handleAddElement = (evento) => {
         handleSubmitData(evento)
         addDataToObjetoArray(data)
+        alert('Success!')
     }
 
     return (

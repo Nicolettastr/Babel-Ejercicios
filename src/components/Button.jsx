@@ -6,10 +6,11 @@ const Button = ({
   onclick,
   className,
   type,
-  buttonType
+  buttonType,
+  disabled
 }) => {
   return (
-    <button className={`generalButton ${className} ${type}`} type={buttonType} onClick={onclick}>
+    <button disabled={disabled} className={`generalButton ${className} ${type}`} type={buttonType} onClick={onclick}>
         {buttonName}
     </button>
   )

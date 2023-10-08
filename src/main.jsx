@@ -6,6 +6,7 @@ import './index.css'
 import ShoppingCar from './pages/ShoppingCar.jsx'
 import Exercise from './pages/Exercise.jsx'
 import Navbar from './components/Navbar.jsx'
+import CreateObject from './pages/createObject.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path='/' element={ <App />}/>
           <Route path='/shoppingCar' element={ <ShoppingCar />}/>
+          <Route path='/createObject' element={ <CreateObject />}/>
           <Route path='/exercises' element={ <Exercise />}/>
         </Routes>
     </BrowserRouter>

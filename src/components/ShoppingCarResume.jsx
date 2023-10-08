@@ -9,7 +9,7 @@ const ShoppingCarResume = ({
 
     const shipPrice = 5
     const totalPrice = shoppingCarItems.reduce((acumulator, item) => {
-        return acumulator + (item.price * item.quantity)
+        return parseInt(acumulator + (item.price * item.quantity))
     }, 0)
 
   return (
@@ -19,6 +19,7 @@ const ShoppingCarResume = ({
         {shoppingCarItems.map((item) => {
             return (
                 <Subtitle 
+                    key={item.id}
                     container={'shoppingSubContainer'}
                     className={'cardSubtitle resumeSub'} 
                     subtitle={item.name}>
