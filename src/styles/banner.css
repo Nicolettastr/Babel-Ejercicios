@@ -1,11 +1,12 @@
 
 .bannerContainer {
     width: 50%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 2rem;
+    margin-top: 2rem;
   }
   
   .line {

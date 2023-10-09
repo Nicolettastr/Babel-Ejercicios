@@ -6,8 +6,8 @@ import { AiOutlineShopping } from 'react-icons/ai'
 const Navbar = () => {
 
     const links = [
-        {name: 'Home', link: '/'},
-        {name: 'About', link: '#'},
+        {name: 'Home', link: '/home'},
+        {name: 'About', link: '/about'},
         {name: 'Cards', link: '#'},
         {name: 'Create Item', link: '/createObject'},
         {name: <AiOutlineShopping/>, link: '/shoppingCar'}
