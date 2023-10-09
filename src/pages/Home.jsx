@@ -12,8 +12,14 @@ const Home = () => {
     const objectArray = JSON.parse(getObjectArray)
     const [search, setSearch] = useState('')
     const nestedLinks = ['news', 'sales', 'ideas', 'design']
+    const [inStock, setInStock] = useState(false)
 
-    const filterObjects = objectArray.filter((item) => item.name.includes(search))
+    const filterObjects = objectArray.filter((item) => {
+      const textSearch = item.name.includes(search)
+      const checkedSearch = inStock ? item.stock > '0' : true;
+
+      return textSearch && checkedSearch
+    })
 
     const handleUserSearch = (event) => {
         console.log(event.target.value)
@@ -30,6 +36,9 @@ const Home = () => {
       )
     })
     
+    const handleCheckBox = (event) => {
+      setInStock(event.target.checked)
+    }
 
   return (
     <div className='d-flex'>
@@ -48,6 +57,13 @@ const Home = () => {
                   value={search} 
                   onChange={(event) => handleUserSearch(event, 'search')}/>
               <Button className={'searchButton'} buttonName={<FiSearch/>}/>
+              <label htmlFor='inputCheckbox'>In Stock</label>
+              <Input 
+                name={'inputCheckbox'} 
+                className={'inputCheckBox'} 
+                type={'checkbox'} 
+                checked={inStock}
+                onChange={(event) => handleCheckBox(event)} />
           </div>
           <div className='d-grid g-4'>
               <Card filterObjects={filterObjects} />

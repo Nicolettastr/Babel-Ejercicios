@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--letter);
 }
 
 :root {
@@ -10,6 +11,7 @@
   --mediumBlue: #1d8ef8;
   --darkBlue: #0036f8;
   --babyBlue: #d5eeff;
+  --letter: rgb(0, 0, 42);
 }
 
 body {
@@ -168,5 +170,5 @@ li {
 }
 
 .links li a {
-  color: black;
+  color: var(--letter);
 }

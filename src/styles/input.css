@@ -16,3 +16,9 @@
     border: 1px solid rgb(232, 232, 232);
     margin: 1rem 0;
 }
+
+.inputCheckBox {
+    width: auto;
+    height: auto;
+    padding: 0;
+}

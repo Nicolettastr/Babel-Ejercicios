@@ -1,3 +1,7 @@
+.form_Container {
+    height: 85vh;
+}
+
 .formInputs_Container div {
     margin: 0.3rem;
 }
