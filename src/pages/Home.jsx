@@ -41,9 +41,9 @@ const Home = () => {
     }
 
   return (
-    <div className='d-flex'>
+    <div className='homecontainer d-flex'>
       <Header/>
-      <div className='d-flex h-90'>
+      <div className='d-flex'>
           <div className='d-flex-row'>
             <ul className='links'>
               {links}
