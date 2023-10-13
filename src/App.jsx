@@ -16,6 +16,8 @@ function App() {
     }, 5000);
   }, []);
 
+  console.log(import.meta.env.VITE_VARIABLE)
+
   return (
         <>
         {isLoading ? 
