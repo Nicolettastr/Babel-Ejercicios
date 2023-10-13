@@ -11,7 +11,7 @@ import ModalContent from '../components/ModalContent'
 import Listas from '../Ejercicios/Listas'
 import Objects from '../Ejercicios/Objects'
 import ListaDinámica from '../Ejercicios/ListaDinámica'
-import Div from '../components/div'
+import Div from '../components/Div'
 import CountDown from '../Ejercicios/CountDown'
 import Formulario from '../Ejercicios/Formulario'
 
