@@ -1,7 +1,8 @@
 .scrollContainer {
     width: 100vw;
     height: 100vh;
-    overflow: auto
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .scrollToTop_Button {
